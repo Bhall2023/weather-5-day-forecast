@@ -60,15 +60,12 @@ searchFormElement.addEventListener('submit', handleSearchSubmit);
 
 
 function displayForecast() {
-  
-  
-  let days = ["Tues", "Wed", "Thu", "Fri", "Sat"];
+  let days = ["Tue", "Wed", "Thu", "Fri", "Sat"];
   let forecastHtml = ""
 
   days.forEach(function (day) {
     forecastHtml =
       forecastHtml +
-    
       `
       <div class="weather-forecast-day">
         <div class="weather-forecast-date">${day}</div>
@@ -82,6 +79,7 @@ function displayForecast() {
       </div>
     `;
   });
+
 let forecastElement = document.querySelector("#forecast");
 forecastElement.innerHTML = forecastHtml;
 }
